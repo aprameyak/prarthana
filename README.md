@@ -2,7 +2,13 @@
 
 A Sanatana Dharma prayer companion — mantras and verses with Sanskrit, **Latin transliteration**, and **English meaning** for every prayer. Favorites stay on your device.
 
-See [DATA.md](./DATA.md) for catalog rules. Run `npm run validate:prayers` before adding entries.
+See [DATA.md](./DATA.md) for catalog rules. Every prayer must have Latin transliteration + English meaning (not Devanagari alone).
+
+```bash
+npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय"
+npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय" --translate   # needs GEMINI_API_KEY
+npm run validate:prayers
+```
 
 ## Develop
 

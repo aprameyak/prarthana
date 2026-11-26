@@ -2,15 +2,31 @@
 
 The catalog is the product. **Accuracy beats quantity.**
 
+Devanagari (or any Indic script) alone is **not enough**. Every entry must also be **transliterated into Latin** and **translated into English** so anyone can read and understand it.
+
 ## Hard requirements (every entry)
 
 | Field | Script | Rule |
 |-------|--------|------|
-| `sanskrit` | Devanagari / Indic OK | Must match a cited traditional form — no invented lines |
-| `transliteration` | **Latin only** | Must match the Sanskrit (IAST preferred) |
-| `meaning` | **English / Latin only** | Faithful sense of the text — not vague AI filler |
+| `sanskrit` | Devanagari / Indic OK | Source text — never the only field |
+| `transliteration` | **Latin only** | Pronunciation (IAST). Required. |
+| `meaning` | **English / Latin only** | Translation/sense. Required. |
 
 Missing transliteration or meaning → **do not merge**.
+
+## How to produce Latin fields
+
+```bash
+# IAST transliteration from Devanagari (deterministic)
+npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय"
+
+# Also draft English meaning (needs GEMINI_API_KEY); stays accuracy=draft
+npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय" --translate
+```
+
+- Transliteration: `sanscript` Devanagari → IAST  
+- Meaning: optional Gemini draft only — still must be human-checked before `verified`  
+- Never mark `verified` from the enrich script alone
 
 ## Accuracy fields
 
