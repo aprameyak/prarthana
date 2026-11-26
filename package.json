@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "validate:prayers": "node scripts/validate-prayers.mjs",
-    "enrich:prayer": "node scripts/enrich-prayer.mjs"
+    "enrich:prayer": "node scripts/enrich-prayer.mjs",
+    "complete:drafts": "node scripts/complete-drafts.mjs",
+    "apply:drafts": "node scripts/apply-drafts.mjs"
   },
   "dependencies": {
     "next": "15.5.29",

@@ -1,0 +1,78 @@
+name: Enrich Catalog Drafts
+
+# Weekly AI-assisted data completion. Opens a PR with draft JSON only.
+# Never marks prayers verified. Human reviews, then runs apply:drafts locally or in a follow-up PR.
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Max prayers to draft this run
+        required: true
+        default: '10'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate draft enrichments
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          LIMIT="${{ github.event.inputs.limit || '10' }}"
+          if [ -n "$GEMINI_API_KEY" ]; then
+            node scripts/complete-drafts.mjs --limit "$LIMIT" --translate
+          else
+            echo "GEMINI_API_KEY missing — transliteration-only drafts"
+            node scripts/complete-drafts.mjs --limit "$LIMIT"
+          fi
+      - name: Open draft PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! ls src/data/drafts/enrichment-*.json >/dev/null 2>&1; then
+            echo "No draft file written"
+            exit 0
+          fi
+          FILE=$(ls -1t src/data/drafts/enrichment-*.json | head -1)
+          BRANCH="chore/enrichment-drafts-$(date -u +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add src/data/drafts/*.json
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -m "Add catalog enrichment drafts (unverified)."
+          git push -u origin HEAD
+          BASE=$(basename "$FILE")
+          gh pr create \
+            --title "Catalog enrichment drafts (review required)" \
+            --body "$(printf '%s\n' \
+              '## Summary' \
+              'Automated **draft** transliteration / meaning proposals.' \
+              '' \
+              '- Transliteration: deterministic IAST (sanscript)' \
+              '- Meaning: Gemini draft when GEMINI_API_KEY is set' \
+              '- Nothing is marked verified' \
+              '' \
+              '## Apply after review' \
+              '\`\`\`bash' \
+              "npm run apply:drafts -- src/data/drafts/${BASE}" \
+              'npm run validate:prayers' \
+              '\`\`\`' \
+              '' \
+              'Set `source` + `accuracy: verified` only after you personally check each row.')" || true

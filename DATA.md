@@ -16,17 +16,30 @@ Missing transliteration or meaning → **do not merge**.
 
 ## How to produce Latin fields
 
+### One-off
 ```bash
-# IAST transliteration from Devanagari (deterministic)
 npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय"
-
-# Also draft English meaning (needs GEMINI_API_KEY); stays accuracy=draft
-npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय" --translate
+npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय" --translate   # GEMINI_API_KEY
 ```
 
-- Transliteration: `sanscript` Devanagari → IAST  
-- Meaning: optional Gemini draft only — still must be human-checked before `verified`  
-- Never mark `verified` from the enrich script alone
+### Periodic draft completion (recommended)
+Weekly GitHub Action **Enrich Catalog Drafts** (or local):
+
+```bash
+# Scan gaps → write src/data/drafts/enrichment-YYYY-MM-DD.json
+GEMINI_API_KEY=... npm run complete:drafts -- --limit 10 --translate
+
+# After human review of that JSON:
+npm run apply:drafts -- src/data/drafts/enrichment-YYYY-MM-DD.json
+npm run validate:prayers
+```
+
+**Policy**
+- Transliteration: deterministic IAST (`sanscript`) — not AI  
+- Meaning: Gemini may draft only  
+- Output accuracy is always `draft`  
+- Action opens a **PR with the JSON**; it does not auto-merge into verified catalog  
+- `verified` + `source` are human-only
 
 ## Accuracy fields
 
