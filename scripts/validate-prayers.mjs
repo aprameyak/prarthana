@@ -12,31 +12,36 @@ const DEVANAGARI = /[\u0900-\u097F]/;
 const errors = [];
 let count = 0;
 
+function check(id, transliteration, meaning) {
+  count += 1;
+  if (!transliteration.trim()) {
+    errors.push(`${id}: missing Latin transliteration`);
+  } else if (DEVANAGARI.test(transliteration)) {
+    errors.push(`${id}: transliteration must be Latin script only`);
+  }
+  if (!meaning.trim()) {
+    errors.push(`${id}: missing Latin/English meaning`);
+  } else if (DEVANAGARI.test(meaning)) {
+    errors.push(`${id}: meaning must be Latin script (English)`);
+  }
+}
+
 for (const file of files) {
   const text = fs.readFileSync(file, "utf8");
-  const blocks = text.split(/\n\s*\{/).slice(1);
-  for (const block of blocks) {
-    const id = block.match(/id:\s*"([^"]+)"/)?.[1];
-    if (!id) continue;
-    count += 1;
+  const idMatches = [...text.matchAll(/\bid:\s*"([^"]+)"/g)];
+  for (const match of idMatches) {
+    const id = match[1];
+    const from = match.index ?? 0;
+    const slice = text.slice(from, from + 2500);
     const transliteration =
-      block.match(/transliteration:\s*`([^`]*)`/)?.[1] ??
-      block.match(/transliteration:\s*"([^"]*)"/)?.[1] ??
+      slice.match(/transliteration:\s*`([^`]*)`/)?.[1] ??
+      slice.match(/transliteration:\s*"([^"]*)"/)?.[1] ??
       "";
     const meaning =
-      block.match(/meaning:\s*`([^`]*)`/)?.[1] ??
-      block.match(/meaning:\s*"([^"]*)"/)?.[1] ??
+      slice.match(/meaning:\s*`([^`]*)`/)?.[1] ??
+      slice.match(/meaning:\s*"([^"]*)"/)?.[1] ??
       "";
-    if (!transliteration.trim()) {
-      errors.push(`${id}: missing Latin transliteration`);
-    } else if (DEVANAGARI.test(transliteration)) {
-      errors.push(`${id}: transliteration must be Latin script only`);
-    }
-    if (!meaning.trim()) {
-      errors.push(`${id}: missing Latin/English meaning`);
-    } else if (DEVANAGARI.test(meaning)) {
-      errors.push(`${id}: meaning must be Latin script (English)`);
-    }
+    check(id, transliteration, meaning);
   }
 }
 
