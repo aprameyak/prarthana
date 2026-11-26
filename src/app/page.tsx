@@ -12,7 +12,7 @@ export default function HomePage() {
         <h1>Prarthana</h1>
         <p>
           Mantras, stotras, aartis, and verses across deities, occasions, and
-          festivals — with Sanskrit, transliteration, and meaning.
+          festivals — published in Latin script with English meaning.
         </p>
         <div className="cta-row">
           <Link href="/prayers" className="btn btn-primary">

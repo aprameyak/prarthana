@@ -60,13 +60,8 @@ export default async function PrayerPage({
       </section>
 
       <section className="block">
-        <h2>Sanskrit</h2>
-        <p className="sanskrit">{prayer.sanskrit}</p>
-      </section>
-
-      <section className="block">
-        <h2>Transliteration</h2>
-        <p className="latin">{prayer.transliteration}</p>
+        <h2>Prayer</h2>
+        <p className="latin prayer-text">{prayer.transliteration}</p>
       </section>
 
       <section className="block">

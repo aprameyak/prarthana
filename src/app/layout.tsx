@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s · Prarthana",
   },
   description:
-    "A quiet Sanatana Dharma prayer companion — mantras, stotras, and daily invocations with Sanskrit, transliteration, and meaning.",
+    "A quiet Sanatana Dharma prayer companion — mantras and verses in Latin transliteration with English meaning.",
 };
 
 export default function RootLayout({

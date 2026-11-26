@@ -2,7 +2,10 @@
 
 The catalog is the product. **Accuracy beats quantity.**
 
-Devanagari (or any Indic script) alone is **not enough**. Every entry must also be **transliterated into Latin** and **translated into English** so anyone can read and understand it.
+**Published app UI is Latin-only** (transliteration + English meaning).  
+Devanagari may be stored in the catalog for source accuracy / enrichment, but it is **not shown** on the site.
+
+Devanagari (or any Indic script) alone is **not enough** in the data layer either — every entry must have Latin transliteration and English meaning.
 
 ## Hard requirements (every entry)
 

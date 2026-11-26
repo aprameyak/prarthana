@@ -1,8 +1,8 @@
 # Prarthana
 
-A Sanatana Dharma prayer companion — mantras and verses with Sanskrit, **Latin transliteration**, and **English meaning** for every prayer. Favorites stay on your device.
+A Sanatana Dharma prayer companion. **Everything on the site is Latin script** — transliteration to read aloud, English meaning to understand. Favorites stay on your device.
 
-See [DATA.md](./DATA.md) for catalog rules. Every prayer must have Latin transliteration + English meaning (not Devanagari alone).
+See [DATA.md](./DATA.md). Devanagari may exist in the data files for sourcing; it is not published in the UI.
 
 ```bash
 npm run enrich:prayer -- --sanskrit "ॐ नमः शिवाय"

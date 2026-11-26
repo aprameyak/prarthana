@@ -88,8 +88,8 @@ export type Completeness = (typeof COMPLETENESS)[number];
 
 /**
  * Hard rules for every prayer:
- * - `sanskrit` may use Devanagari (or other Indic script) and must be source-accurate
- * - `transliteration` MUST be Latin script and match the Sanskrit
+ * - `sanskrit` may use Devanagari (or other Indic script) for sourcing; never shown in the UI
+ * - `transliteration` MUST be Latin script, match the Sanskrit, and is what the app publishes
  * - `meaning` MUST be English in Latin script and faithful to the text
  * - Prefer `verified` only after human check + `source`
  * Never ship an entry missing transliteration or meaning.
