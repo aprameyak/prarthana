@@ -1,0 +1,545 @@
+{
+  "meta": {
+    "licence": "CC BY 4.0",
+    "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Dates: diwalicountdown.in",
+    "source": "Drik Panchang, New Delhi for verified years; diwalicountdown.in astronomical calculation for the rest.",
+    "note": "Calculated values may differ from your local panchang. Dates can differ by a day between cities and traditions.",
+    "docs": "https://diwalicountdown.in/diwali-date-api",
+    "years": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030
+    ],
+    "trimmed": "Vendored subset for Prarthana calendar (2026\u20132030)."
+  },
+  "rows": [
+    {
+      "festival": "makar-sankranti",
+      "name": "Makar Sankranti",
+      "year": 2026,
+      "date": "2026-01-14",
+      "status": "verified"
+    },
+    {
+      "festival": "maha-shivratri",
+      "name": "Maha Shivratri",
+      "year": 2026,
+      "date": "2026-02-15",
+      "status": "verified"
+    },
+    {
+      "festival": "holi",
+      "name": "Holi",
+      "year": 2026,
+      "date": "2026-03-04",
+      "status": "verified"
+    },
+    {
+      "festival": "ram-navami",
+      "name": "Ram Navami",
+      "year": 2026,
+      "date": "2026-03-26",
+      "status": "verified"
+    },
+    {
+      "festival": "raksha-bandhan",
+      "name": "Raksha Bandhan",
+      "year": 2026,
+      "date": "2026-08-28",
+      "status": "verified"
+    },
+    {
+      "festival": "janmashtami",
+      "name": "Janmashtami",
+      "year": 2026,
+      "date": "2026-09-04",
+      "status": "verified"
+    },
+    {
+      "festival": "ganesh-chaturthi",
+      "name": "Ganesh Chaturthi",
+      "year": 2026,
+      "date": "2026-09-14",
+      "status": "verified"
+    },
+    {
+      "festival": "navratri",
+      "name": "Navratri",
+      "year": 2026,
+      "date": "2026-10-11",
+      "status": "verified"
+    },
+    {
+      "festival": "dussehra",
+      "name": "Dussehra",
+      "year": 2026,
+      "date": "2026-10-20",
+      "status": "verified"
+    },
+    {
+      "festival": "karwa-chauth",
+      "name": "Karwa Chauth",
+      "year": 2026,
+      "date": "2026-10-29",
+      "status": "verified"
+    },
+    {
+      "festival": "dhanteras",
+      "name": "Dhanteras",
+      "year": 2026,
+      "date": "2026-11-06",
+      "status": "verified"
+    },
+    {
+      "festival": "choti-diwali",
+      "name": "Choti Diwali",
+      "year": 2026,
+      "date": "2026-11-08",
+      "status": "verified"
+    },
+    {
+      "festival": "govardhan-puja",
+      "name": "Govardhan Puja",
+      "year": 2026,
+      "date": "2026-11-10",
+      "status": "verified"
+    },
+    {
+      "festival": "bhai-dooj",
+      "name": "Bhai Dooj",
+      "year": 2026,
+      "date": "2026-11-11",
+      "status": "verified"
+    },
+    {
+      "festival": "chhath-puja",
+      "name": "Chhath Puja",
+      "year": 2026,
+      "date": "2026-11-15",
+      "status": "verified"
+    },
+    {
+      "festival": "makar-sankranti",
+      "name": "Makar Sankranti",
+      "year": 2027,
+      "date": "2027-01-15",
+      "status": "verified"
+    },
+    {
+      "festival": "maha-shivratri",
+      "name": "Maha Shivratri",
+      "year": 2027,
+      "date": "2027-03-06",
+      "status": "verified"
+    },
+    {
+      "festival": "holi",
+      "name": "Holi",
+      "year": 2027,
+      "date": "2027-03-22",
+      "status": "verified"
+    },
+    {
+      "festival": "ram-navami",
+      "name": "Ram Navami",
+      "year": 2027,
+      "date": "2027-04-15",
+      "status": "verified"
+    },
+    {
+      "festival": "raksha-bandhan",
+      "name": "Raksha Bandhan",
+      "year": 2027,
+      "date": "2027-08-17",
+      "status": "verified"
+    },
+    {
+      "festival": "janmashtami",
+      "name": "Janmashtami",
+      "year": 2027,
+      "date": "2027-08-25",
+      "status": "verified"
+    },
+    {
+      "festival": "ganesh-chaturthi",
+      "name": "Ganesh Chaturthi",
+      "year": 2027,
+      "date": "2027-09-04",
+      "status": "verified"
+    },
+    {
+      "festival": "navratri",
+      "name": "Navratri",
+      "year": 2027,
+      "date": "2027-09-30",
+      "status": "verified"
+    },
+    {
+      "festival": "dussehra",
+      "name": "Dussehra",
+      "year": 2027,
+      "date": "2027-10-09",
+      "status": "verified"
+    },
+    {
+      "festival": "karwa-chauth",
+      "name": "Karwa Chauth",
+      "year": 2027,
+      "date": "2027-10-18",
+      "status": "verified"
+    },
+    {
+      "festival": "dhanteras",
+      "name": "Dhanteras",
+      "year": 2027,
+      "date": "2027-10-27",
+      "status": "verified"
+    },
+    {
+      "festival": "choti-diwali",
+      "name": "Choti Diwali",
+      "year": 2027,
+      "date": "2027-10-28",
+      "status": "verified"
+    },
+    {
+      "festival": "govardhan-puja",
+      "name": "Govardhan Puja",
+      "year": 2027,
+      "date": "2027-10-30",
+      "status": "verified"
+    },
+    {
+      "festival": "bhai-dooj",
+      "name": "Bhai Dooj",
+      "year": 2027,
+      "date": "2027-10-31",
+      "status": "verified"
+    },
+    {
+      "festival": "chhath-puja",
+      "name": "Chhath Puja",
+      "year": 2027,
+      "date": "2027-11-04",
+      "status": "verified"
+    },
+    {
+      "festival": "makar-sankranti",
+      "name": "Makar Sankranti",
+      "year": 2028,
+      "date": "2028-01-15",
+      "status": "verified"
+    },
+    {
+      "festival": "maha-shivratri",
+      "name": "Maha Shivratri",
+      "year": 2028,
+      "date": "2028-02-23",
+      "status": "verified"
+    },
+    {
+      "festival": "holi",
+      "name": "Holi",
+      "year": 2028,
+      "date": "2028-03-11",
+      "status": "verified"
+    },
+    {
+      "festival": "ram-navami",
+      "name": "Ram Navami",
+      "year": 2028,
+      "date": "2028-04-03",
+      "status": "verified"
+    },
+    {
+      "festival": "raksha-bandhan",
+      "name": "Raksha Bandhan",
+      "year": 2028,
+      "date": "2028-08-05",
+      "status": "verified"
+    },
+    {
+      "festival": "janmashtami",
+      "name": "Janmashtami",
+      "year": 2028,
+      "date": "2028-08-13",
+      "status": "verified"
+    },
+    {
+      "festival": "ganesh-chaturthi",
+      "name": "Ganesh Chaturthi",
+      "year": 2028,
+      "date": "2028-08-23",
+      "status": "verified"
+    },
+    {
+      "festival": "navratri",
+      "name": "Navratri",
+      "year": 2028,
+      "date": "2028-09-19",
+      "status": "verified"
+    },
+    {
+      "festival": "dussehra",
+      "name": "Dussehra",
+      "year": 2028,
+      "date": "2028-09-27",
+      "status": "verified"
+    },
+    {
+      "festival": "karwa-chauth",
+      "name": "Karwa Chauth",
+      "year": 2028,
+      "date": "2028-10-07",
+      "status": "verified"
+    },
+    {
+      "festival": "dhanteras",
+      "name": "Dhanteras",
+      "year": 2028,
+      "date": "2028-10-15",
+      "status": "verified"
+    },
+    {
+      "festival": "choti-diwali",
+      "name": "Choti Diwali",
+      "year": 2028,
+      "date": "2028-10-17",
+      "status": "verified"
+    },
+    {
+      "festival": "govardhan-puja",
+      "name": "Govardhan Puja",
+      "year": 2028,
+      "date": "2028-10-18",
+      "status": "verified"
+    },
+    {
+      "festival": "bhai-dooj",
+      "name": "Bhai Dooj",
+      "year": 2028,
+      "date": "2028-10-19",
+      "status": "verified"
+    },
+    {
+      "festival": "chhath-puja",
+      "name": "Chhath Puja",
+      "year": 2028,
+      "date": "2028-10-23",
+      "status": "verified"
+    },
+    {
+      "festival": "makar-sankranti",
+      "name": "Makar Sankranti",
+      "year": 2029,
+      "date": "2029-01-14",
+      "status": "verified"
+    },
+    {
+      "festival": "maha-shivratri",
+      "name": "Maha Shivratri",
+      "year": 2029,
+      "date": "2029-02-11",
+      "status": "verified"
+    },
+    {
+      "festival": "holi",
+      "name": "Holi",
+      "year": 2029,
+      "date": "2029-03-01",
+      "status": "verified"
+    },
+    {
+      "festival": "ram-navami",
+      "name": "Ram Navami",
+      "year": 2029,
+      "date": "2029-04-23",
+      "status": "verified"
+    },
+    {
+      "festival": "raksha-bandhan",
+      "name": "Raksha Bandhan",
+      "year": 2029,
+      "date": "2029-08-23",
+      "status": "verified"
+    },
+    {
+      "festival": "janmashtami",
+      "name": "Janmashtami",
+      "year": 2029,
+      "date": "2029-09-01",
+      "status": "verified"
+    },
+    {
+      "festival": "ganesh-chaturthi",
+      "name": "Ganesh Chaturthi",
+      "year": 2029,
+      "date": "2029-09-11",
+      "status": "verified"
+    },
+    {
+      "festival": "navratri",
+      "name": "Navratri",
+      "year": 2029,
+      "date": "2029-10-08",
+      "status": "verified"
+    },
+    {
+      "festival": "dussehra",
+      "name": "Dussehra",
+      "year": 2029,
+      "date": "2029-10-16",
+      "status": "verified"
+    },
+    {
+      "festival": "karwa-chauth",
+      "name": "Karwa Chauth",
+      "year": 2029,
+      "date": "2029-10-26",
+      "status": "verified"
+    },
+    {
+      "festival": "dhanteras",
+      "name": "Dhanteras",
+      "year": 2029,
+      "date": "2029-11-04",
+      "status": "verified"
+    },
+    {
+      "festival": "choti-diwali",
+      "name": "Choti Diwali",
+      "year": 2029,
+      "date": "2029-11-05",
+      "status": "verified"
+    },
+    {
+      "festival": "govardhan-puja",
+      "name": "Govardhan Puja",
+      "year": 2029,
+      "date": "2029-11-06",
+      "status": "verified"
+    },
+    {
+      "festival": "bhai-dooj",
+      "name": "Bhai Dooj",
+      "year": 2029,
+      "date": "2029-11-07",
+      "status": "verified"
+    },
+    {
+      "festival": "chhath-puja",
+      "name": "Chhath Puja",
+      "year": 2029,
+      "date": "2029-11-11",
+      "status": "verified"
+    },
+    {
+      "festival": "makar-sankranti",
+      "name": "Makar Sankranti",
+      "year": 2030,
+      "date": "2030-01-14",
+      "status": "verified"
+    },
+    {
+      "festival": "maha-shivratri",
+      "name": "Maha Shivratri",
+      "year": 2030,
+      "date": "2030-03-02",
+      "status": "verified"
+    },
+    {
+      "festival": "holi",
+      "name": "Holi",
+      "year": 2030,
+      "date": "2030-03-20",
+      "status": "verified"
+    },
+    {
+      "festival": "ram-navami",
+      "name": "Ram Navami",
+      "year": 2030,
+      "date": "2030-04-12",
+      "status": "verified"
+    },
+    {
+      "festival": "raksha-bandhan",
+      "name": "Raksha Bandhan",
+      "year": 2030,
+      "date": "2030-08-13",
+      "status": "verified"
+    },
+    {
+      "festival": "janmashtami",
+      "name": "Janmashtami",
+      "year": 2030,
+      "date": "2030-08-21",
+      "status": "verified"
+    },
+    {
+      "festival": "ganesh-chaturthi",
+      "name": "Ganesh Chaturthi",
+      "year": 2030,
+      "date": "2030-09-01",
+      "status": "verified"
+    },
+    {
+      "festival": "navratri",
+      "name": "Navratri",
+      "year": 2030,
+      "date": "2030-09-28",
+      "status": "verified"
+    },
+    {
+      "festival": "dussehra",
+      "name": "Dussehra",
+      "year": 2030,
+      "date": "2030-10-06",
+      "status": "verified"
+    },
+    {
+      "festival": "karwa-chauth",
+      "name": "Karwa Chauth",
+      "year": 2030,
+      "date": "2030-10-15",
+      "status": "verified"
+    },
+    {
+      "festival": "dhanteras",
+      "name": "Dhanteras",
+      "year": 2030,
+      "date": "2030-10-24",
+      "status": "verified"
+    },
+    {
+      "festival": "choti-diwali",
+      "name": "Choti Diwali",
+      "year": 2030,
+      "date": "2030-10-26",
+      "status": "verified"
+    },
+    {
+      "festival": "govardhan-puja",
+      "name": "Govardhan Puja",
+      "year": 2030,
+      "date": "2030-10-27",
+      "status": "verified"
+    },
+    {
+      "festival": "bhai-dooj",
+      "name": "Bhai Dooj",
+      "year": 2030,
+      "date": "2030-10-28",
+      "status": "verified"
+    },
+    {
+      "festival": "chhath-puja",
+      "name": "Chhath Puja",
+      "year": 2030,
+      "date": "2030-11-01",
+      "status": "verified"
+    }
+  ]
+}

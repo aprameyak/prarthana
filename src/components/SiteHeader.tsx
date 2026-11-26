@@ -8,6 +8,7 @@ export function SiteHeader() {
       </Link>
       <nav className="nav">
         <Link href="/prayers">Prayers</Link>
+        <Link href="/calendar">Calendar</Link>
         <Link href="/favorites">Favorites</Link>
       </nav>
     </header>
