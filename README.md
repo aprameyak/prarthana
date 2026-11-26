@@ -1,6 +1,8 @@
 # Prarthana
 
-A Sanatana Dharma prayer companion — mantras and verses with Sanskrit, transliteration, and meaning. Favorites stay on your device.
+A Sanatana Dharma prayer companion — mantras and verses with Sanskrit, **Latin transliteration**, and **English meaning** for every prayer. Favorites stay on your device.
+
+See [DATA.md](./DATA.md) for catalog rules. Run `npm run validate:prayers` before adding entries.
 
 ## Develop
 

@@ -80,6 +80,13 @@ export const KINDS = [
 
 export type PrayerKind = (typeof KINDS)[number];
 
+/**
+ * Hard rule for every prayer:
+ * - `sanskrit` may use Devanagari (or other Indic script)
+ * - `transliteration` MUST be Latin script (IAST / common Roman)
+ * - `meaning` MUST be English in Latin script
+ * Never ship an entry missing transliteration or meaning.
+ */
 export type Prayer = {
   id: string;
   title: string;
@@ -87,8 +94,11 @@ export type Prayer = {
   occasions: Occasion[];
   festivals: Festival[];
   kind: PrayerKind;
+  /** Original text (often Devanagari). */
   sanskrit: string;
+  /** Required. Latin-script transliteration for reading aloud. */
   transliteration: string;
+  /** Required. Plain English meaning in Latin script. */
   meaning: string;
   tags: string[];
 };
