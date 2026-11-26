@@ -44,6 +44,13 @@ export default async function PrayerPage({
         <p className="meaning" style={{ margin: 0 }}>
           {prayer.occasions.map((o) => OCCASION_LABELS[o]).join(" · ")}
         </p>
+        <p className="accuracy-note">
+          {prayer.accuracy === "verified"
+            ? "Verified text"
+            : "Unreviewed — meaning and wording still need source checking"}
+          {prayer.completeness === "excerpt" ? " · Excerpt / opening only" : ""}
+          {prayer.source ? ` · Source: ${prayer.source}` : ""}
+        </p>
         <div className="prayer-actions">
           <FavoriteButton id={prayer.id} />
           <Link href="/prayers" className="btn btn-ghost">

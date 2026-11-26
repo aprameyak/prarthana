@@ -237,6 +237,14 @@ a {
   font-size: 0.9rem;
 }
 
+.accuracy-note {
+  margin: 0.75rem 0 0;
+  color: var(--leaf);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  max-width: 40rem;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;

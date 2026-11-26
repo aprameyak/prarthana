@@ -1,8 +1,8 @@
 import { CATALOG } from "./catalog";
 import { CATALOG_MORE } from "./catalog-more";
-import type { Festival, Occasion, Prayer, PrayerKind } from "./types";
+import type { Completeness, Festival, Occasion, Prayer, PrayerKind } from "./types";
 
-export type { Deity, Festival, Occasion, Prayer, PrayerKind } from "./types";
+export type { Deity, Festival, Occasion, Prayer, PrayerKind, AccuracyStatus } from "./types";
 export {
   DEITIES,
   FESTIVALS,
@@ -12,7 +12,27 @@ export {
   KIND_LABELS,
 } from "./types";
 
-export const PRAYERS: Prayer[] = [...CATALOG, ...CATALOG_MORE];
+function inferCompleteness(title: string): Completeness {
+  return /opening|spirit|verse\s*1|short|remembrance/i.test(title)
+    ? "excerpt"
+    : "full";
+}
+
+/** Ensure every row has accuracy metadata; nothing is verified by default. */
+function normalize(
+  prayer: Omit<Prayer, "accuracy" | "completeness"> &
+    Partial<Pick<Prayer, "accuracy" | "completeness" | "source">>
+): Prayer {
+  return {
+    ...prayer,
+    festivals: prayer.festivals ?? [],
+    tags: prayer.tags ?? [],
+    accuracy: prayer.accuracy ?? "unreviewed",
+    completeness: prayer.completeness ?? inferCompleteness(prayer.title),
+  };
+}
+
+export const PRAYERS: Prayer[] = [...CATALOG, ...CATALOG_MORE].map(normalize);
 
 export function getPrayer(id: string): Prayer | undefined {
   return PRAYERS.find((p) => p.id === id);

@@ -80,11 +80,18 @@ export const KINDS = [
 
 export type PrayerKind = (typeof KINDS)[number];
 
+export const ACCURACY = ["unreviewed", "draft", "verified"] as const;
+export type AccuracyStatus = (typeof ACCURACY)[number];
+
+export const COMPLETENESS = ["full", "excerpt"] as const;
+export type Completeness = (typeof COMPLETENESS)[number];
+
 /**
- * Hard rule for every prayer:
- * - `sanskrit` may use Devanagari (or other Indic script)
- * - `transliteration` MUST be Latin script (IAST / common Roman)
- * - `meaning` MUST be English in Latin script
+ * Hard rules for every prayer:
+ * - `sanskrit` may use Devanagari (or other Indic script) and must be source-accurate
+ * - `transliteration` MUST be Latin script and match the Sanskrit
+ * - `meaning` MUST be English in Latin script and faithful to the text
+ * - Prefer `verified` only after human check + `source`
  * Never ship an entry missing transliteration or meaning.
  */
 export type Prayer = {
@@ -101,6 +108,12 @@ export type Prayer = {
   /** Required. Plain English meaning in Latin script. */
   meaning: string;
   tags: string[];
+  /** Named scripture/stotra/edition used for the Sanskrit. */
+  source?: string;
+  /** Human verification state. Default unreviewed. */
+  accuracy: AccuracyStatus;
+  /** Full unit vs opening/partial of a longer work. */
+  completeness: Completeness;
 };
 
 export const OCCASION_LABELS: Record<Occasion, string> = {

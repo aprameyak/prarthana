@@ -1,6 +1,10 @@
 import type { Prayer } from "./types";
 
-const more: Prayer[] = [
+/** Draft rows; accuracy/completeness filled by normalize() in prayers.ts */
+type Draft = Omit<Prayer, "accuracy" | "completeness" | "source"> &
+  Partial<Pick<Prayer, "accuracy" | "completeness" | "source">>;
+
+const more: Draft[] = [
   {
     id: "rudram-open",
     title: "Sri Rudram — Opening Spirit",
@@ -528,4 +532,4 @@ const more: Prayer[] = [
   },
 ];
 
-export const CATALOG_MORE: Prayer[] = more;
+export const CATALOG_MORE: Draft[] = more;

@@ -1,4 +1,12 @@
-import type { Deity, Festival, Occasion, Prayer, PrayerKind } from "./types";
+import type {
+  AccuracyStatus,
+  Completeness,
+  Deity,
+  Festival,
+  Occasion,
+  Prayer,
+  PrayerKind,
+} from "./types";
 
 type Draft = {
   id: string;
@@ -11,7 +19,14 @@ type Draft = {
   transliteration: string;
   meaning: string;
   tags?: string[];
+  source?: string;
+  accuracy?: AccuracyStatus;
+  completeness?: Completeness;
 };
+
+function inferCompleteness(title: string): Completeness {
+  return /opening|spirit|verse\s*1|short/i.test(title) ? "excerpt" : "full";
+}
 
 function p(d: Draft): Prayer {
   return {
@@ -25,6 +40,9 @@ function p(d: Draft): Prayer {
     transliteration: d.transliteration,
     meaning: d.meaning,
     tags: d.tags ?? [],
+    source: d.source,
+    accuracy: d.accuracy ?? "unreviewed",
+    completeness: d.completeness ?? inferCompleteness(d.title),
   };
 }
 
@@ -43,6 +61,9 @@ export const CATALOG: Prayer[] = [
     meaning:
       "We meditate on the radiant light of Savitr that pervades the three worlds. May that light awaken and guide our intellect.",
     tags: ["daily", "wisdom", "sandhya"],
+    source: "Ṛgveda 3.62.10 (Sāvitrī); traditional sandhyā form with mahāvyāhṛtis",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "ganesha-vandana",
@@ -94,6 +115,9 @@ export const CATALOG: Prayer[] = [
     transliteration: "Om namaḥ śivāya",
     meaning: "Salutations to Shiva—the auspicious. A five-syllable mantra of purification and still awareness.",
     tags: ["panchakshari", "japa"],
+    source: "Traditional Śaiva pañcākṣarī mantra",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "maha-mrityunjaya",
@@ -109,6 +133,9 @@ export const CATALOG: Prayer[] = [
     meaning:
       "We worship the three-eyed One who nourishes. As a fruit is freed from its vine, free us from death into immortality.",
     tags: ["healing", "rudra"],
+    source: "Ṛgveda 7.59.12 / Taittirīya Saṃhitā (Tryambaka); traditional japa form with praṇava",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "shiva-panchakshari-stotra",
@@ -145,6 +172,9 @@ export const CATALOG: Prayer[] = [
     transliteration: "Om namo nārāyaṇāya",
     meaning: "Salutations to Narayana—refuge of all beings. A mantra of devotion and surrender.",
     tags: ["ashtakshara", "bhakti"],
+    source: "Traditional Vaiṣṇava aṣṭākṣarī mantra",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "vishnu-sahasranama-dhyana",
@@ -398,6 +428,9 @@ export const CATALOG: Prayer[] = [
     meaning:
       "The offering is Brahman, the oblation is Brahman, offered by Brahman into the fire of Brahman—one absorbed in Brahman-action reaches Brahman alone.",
     tags: ["gita", "food"],
+    source: "Bhagavad Gītā 4.24",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "shanti-mantra",
@@ -424,6 +457,9 @@ export const CATALOG: Prayer[] = [
       "Asato mā sad gamaya\nTamaso mā jyotir gamaya\nMṛtyor mā amṛtaṃ gamaya",
     meaning: "Lead me from the unreal to the real, from darkness to light, from death to immortality.",
     tags: ["upanishad"],
+    source: "Bṛhadāraṇyaka Upaniṣad 1.3.28",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "purnamadah",
@@ -437,6 +473,9 @@ export const CATALOG: Prayer[] = [
       "Om pūrṇamadaḥ pūrṇamidaṃ pūrṇātpūrṇamudacyate\nPūrṇasya pūrṇamādāya pūrṇamevāvaśiṣyate",
     meaning: "That is whole, this is whole. From wholeness, wholeness arises. Taking wholeness from wholeness, wholeness alone remains.",
     tags: ["upanishad", "shanti"],
+    source: "Īśāvāsya Upaniṣad śānti / Bṛhadāraṇyaka tradition",
+    accuracy: "verified",
+    completeness: "full",
   }),
   p({
     id: "gayatri-closing-shanti",
