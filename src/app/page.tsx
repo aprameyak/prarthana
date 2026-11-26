@@ -37,6 +37,18 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <section className="section">
+        <div className="section-head">
+          <div>
+            <h2>Texts</h2>
+            <p>Vedas, Ramayana, Mahabharata, and Puranas.</p>
+          </div>
+          <Link href="/texts" className="btn btn-ghost">
+            Open texts
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

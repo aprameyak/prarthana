@@ -27,10 +27,7 @@ export function FestivalCalendar() {
         <div className="section-head">
           <div>
             <h2>Calendar</h2>
-            <p>
-              Festival dates for quiet planning, with links into prayers when we
-              have them.
-            </p>
+            <p>Festival dates, with links to related prayers when available.</p>
           </div>
         </div>
       </section>

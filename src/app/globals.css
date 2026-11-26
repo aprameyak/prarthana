@@ -296,6 +296,105 @@ a {
   gap: 1rem;
 }
 
+.text-stack {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.text-block {
+  padding-top: 0.25rem;
+}
+
+.text-block-head {
+  margin-bottom: 1.1rem;
+  max-width: 40rem;
+}
+
+.text-family {
+  margin: 0 0 0.35rem;
+  color: var(--leaf);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.text-block-head h3 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display), serif;
+  font-weight: 500;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  color: var(--gold-soft);
+}
+
+.text-block-head p {
+  margin: 0;
+  color: var(--mist);
+  line-height: 1.55;
+}
+
+.text-block-head .cta-row {
+  margin-top: 0.9rem;
+}
+
+.texts-filters {
+  margin-bottom: 1.25rem;
+}
+
+.verse-panel {
+  margin-top: 1.5rem;
+}
+
+.verse-source {
+  color: var(--leaf);
+  font-size: 0.85em;
+}
+
+.verse-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.verse-row {
+  display: grid;
+  grid-template-columns: minmax(4.5rem, 6rem) 1fr;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.verse-ref {
+  color: var(--leaf);
+  font-size: 0.85rem;
+}
+
+.verse-iast {
+  margin: 0;
+  color: var(--paper);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  font-family: var(--font-display), serif;
+  font-size: 1.05rem;
+}
+
+.verse-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  color: var(--mist);
+}
+
+@media (max-width: 560px) {
+  .verse-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
 .prayer-card {
   display: flex;
   flex-direction: column;

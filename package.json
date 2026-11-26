@@ -10,7 +10,9 @@
     "validate:prayers": "node scripts/validate-prayers.mjs",
     "enrich:prayer": "node scripts/enrich-prayer.mjs",
     "complete:drafts": "node scripts/complete-drafts.mjs",
-    "apply:drafts": "node scripts/apply-drafts.mjs"
+    "apply:drafts": "node scripts/apply-drafts.mjs",
+    "ingest:texts": "node scripts/ingest-texts.mjs",
+    "validate:texts": "node scripts/validate-texts.mjs"
   },
   "dependencies": {
     "next": "15.5.29",

@@ -9,7 +9,6 @@
  */
 
 import fs from "node:fs";
-import path from "node:path";
 import { CATALOG_FILES } from "./lib/catalog-scan.mjs";
 
 const draftPath = process.argv[2];
@@ -76,10 +75,7 @@ for (const file of CATALOG_FILES) {
       skipped += 1;
       continue;
     }
-    const re = new RegExp(
-      `([\\s\\S]*?\\bid:\\s*"${p.id}"[\\s\\S]*?)(?=\\n\\s*\\{\\n|\\n\\s*p\\(\\{|\\n\\];|\\nexport|$)`
-    );
-    // Simpler: find id and patch a window
+    // Find id and patch a window
     const idToken = `id: "${p.id}"`;
     const idx = text.indexOf(idToken);
     if (idx === -1) continue;
