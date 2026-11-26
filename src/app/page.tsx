@@ -18,9 +18,6 @@ export default function HomePage() {
           <Link href="/prayers" className="btn btn-primary">
             Browse prayers
           </Link>
-          <Link href="/prayers/gayatri" className="btn btn-ghost">
-            Begin with Gayatri
-          </Link>
         </div>
       </section>
 
