@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
+import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <div className="shell">
           <SiteHeader />
           <main>{children}</main>
+          <SiteFooter />
         </div>
       </body>
     </html>
