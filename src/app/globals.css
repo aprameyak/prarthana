@@ -225,6 +225,18 @@ a {
   line-height: 1.45;
 }
 
+.prayer-card-occasions {
+  margin: 0.15rem 0 0;
+  color: var(--leaf);
+  font-size: 0.78rem;
+}
+
+.results-count {
+  margin: 0 0 1rem;
+  color: var(--mist);
+  font-size: 0.9rem;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;

@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FavoriteButton } from "@/components/FavoriteButton";
-import { getPrayer, PRAYERS } from "@/data/prayers";
+import {
+  getPrayer,
+  KIND_LABELS,
+  OCCASION_LABELS,
+  PRAYERS,
+} from "@/data/prayers";
 
 export function generateStaticParams() {
   return PRAYERS.map((p) => ({ id: p.id }));
@@ -30,9 +35,15 @@ export default async function PrayerPage({
     <>
       <section className="prayer-hero">
         <p className="meta">
-          {prayer.deity} · {prayer.occasion}
+          {prayer.deities.join(" · ")} · {KIND_LABELS[prayer.kind]}
+          {prayer.festivals.length
+            ? ` · ${prayer.festivals.join(" · ")}`
+            : ""}
         </p>
         <h1>{prayer.title}</h1>
+        <p className="meaning" style={{ margin: 0 }}>
+          {prayer.occasions.map((o) => OCCASION_LABELS[o]).join(" · ")}
+        </p>
         <div className="prayer-actions">
           <FavoriteButton id={prayer.id} />
           <Link href="/prayers" className="btn btn-ghost">

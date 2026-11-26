@@ -11,7 +11,7 @@ export default function PrayersPage() {
       <div className="section-head">
         <div>
           <h2>Prayers</h2>
-          <p>Filter by deity, occasion, or search by name.</p>
+          <p>Filter by deity, occasion, festival, or type.</p>
         </div>
       </div>
       <Suspense fallback={<p className="empty">Loading…</p>}>

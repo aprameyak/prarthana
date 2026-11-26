@@ -11,8 +11,8 @@ export default function HomePage() {
         <p className="hero-kicker">Sanatana Dharma</p>
         <h1>Prarthana</h1>
         <p>
-          A calm space for daily prayer — Sanskrit, transliteration, and meaning,
-          gathered for quiet reading and remembrance.
+          Mantras, stotras, aartis, and verses across deities, occasions, and
+          festivals — with Sanskrit, transliteration, and meaning.
         </p>
         <div className="cta-row">
           <Link href="/prayers" className="btn btn-primary">
