@@ -70,6 +70,11 @@ Until then it stays `unreviewed` or `draft` and should be labeled as such in the
 
 Never paste a whole Chalisa as one unchecked blob.
 
+## Where to get real text
+
+See **[SOURCES.md](./SOURCES.md)** — Nitya PD JSON, Sanskrit Wikisource, VedaWeb/GRETIL, PD English editions.  
+Prefer those over blogs. Do not bulk-copy sanskritdocuments.org.
+
 ## Do not
 
 - Invent Sanskrit to “fill” a festival  
