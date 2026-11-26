@@ -47,7 +47,7 @@ export default async function PrayerPage({
         <p className="accuracy-note">
           {prayer.accuracy === "verified"
             ? "Verified text"
-            : "Unreviewed — meaning and wording still need source checking"}
+            : "Unreviewed. Meaning and wording still need source checking"}
           {prayer.completeness === "excerpt" ? " · Excerpt / opening only" : ""}
           {prayer.source ? ` · Source: ${prayer.source}` : ""}
         </p>

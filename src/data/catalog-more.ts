@@ -7,55 +7,55 @@ type Draft = Omit<Prayer, "accuracy" | "completeness" | "source"> &
 const more: Draft[] = [
   {
     id: "rudram-open",
-    title: "Sri Rudram — Opening Spirit",
+    title: "Sri Rudram: Opening Spirit",
     deities: ["Shiva"],
     occasions: ["morning", "healing"],
     festivals: ["Maha Shivaratri"],
     kind: "stotra",
     sanskrit: "ॐ नमस्ते रुद्र मन्यव उतोत इषवे नमः ।",
     transliteration: "Om namaste rudra manyava utota iṣave namaḥ",
-    meaning: "Salutations to Rudra's wrath and to his arrow—opening spirit of the Rudram chant.",
+    meaning: "Salutations to Rudra's wrath and to his arrow, opening spirit of the Rudram chant.",
     tags: ["yajurveda", "rudram"],
   },
   {
     id: "bilvashtakam-1",
-    title: "Bilvashtakam — Verse 1",
+    title: "Bilvashtakam: Verse 1",
     deities: ["Shiva"],
     occasions: ["morning", "anytime"],
     festivals: ["Maha Shivaratri"],
     kind: "ashtakam",
     sanskrit: "त्रिदलं त्रिगुणाकारं त्रिनॆत्रं च त्रियायुधम् ।",
     transliteration: "Tridalaṃ triguṇākāraṃ trinetraṃ ca triyāyudham",
-    meaning: "Three-leaved, three-gunas, three-eyed, three-weaponed—praise of the bilva offering to Shiva.",
+    meaning: "Three-leaved, three-gunas, three-eyed, three-weaponed; praise of the bilva offering to Shiva.",
     tags: ["bilva"],
   },
   {
     id: "nirvana-shatakam-1",
-    title: "Nirvana Shatakam — Verse 1",
+    title: "Nirvana Shatakam: Verse 1",
     deities: ["Shiva", "General"],
     occasions: ["anytime", "study"],
     festivals: [],
     kind: "stotra",
     sanskrit: "मनोबुद्ध्यहङ्कार चित्तानि नाहं ।",
     transliteration: "Manobuddhyahaṅkāra cittāni nāhaṃ",
-    meaning: "I am not mind, intellect, ego, or memory—opening of Shankara's hymn of the Self.",
+    meaning: "I am not mind, intellect, ego, or memory; opening of Shankara's hymn of the Self.",
     tags: ["vedanta", "shankaracharya"],
   },
   {
     id: "dashavatara-1",
-    title: "Dashavatara Stotra — Opening",
+    title: "Dashavatara Stotra: Opening",
     deities: ["Vishnu"],
     occasions: ["anytime"],
     festivals: ["Ekadasashi"],
     kind: "stotra",
     sanskrit: "वेदानुद्धरते जगन्निवहते भूगोलमुद्बिभ्रते ।",
     transliteration: "Vedānuddharate jagannivahate bhūgolamudbibhrate",
-    meaning: "Who lifts the Vedas and bears the world—praise of Vishnu's ten descents.",
+    meaning: "Who lifts the Vedas and bears the world; praise of Vishnu's ten descents.",
     tags: ["avatara", "jayadeva"],
   },
   {
     id: "mukunda-mala-1",
-    title: "Mukunda Mala — Opening",
+    title: "Mukunda Mala: Opening",
     deities: ["Vishnu", "Krishna"],
     occasions: ["anytime"],
     festivals: ["Ekadasashi", "Janmashtami"],
@@ -63,19 +63,19 @@ const more: Draft[] = [
     sanskrit: "श्रीवल्लभॆति वरदॆति दयापरॆति भक्तप्रियॆति भवलुण्ठनकोविदॆति ।",
     transliteration:
       "Śrīvallabheti varadeti dayāpareti bhaktapriyeti bhavaluṇṭhanakovideti",
-    meaning: "Beloved of Shri, giver of boons, ocean of compassion, dear to devotees—names of Mukunda.",
+    meaning: "Beloved of Shri, giver of boons, ocean of compassion, dear to devotees; names of Mukunda.",
     tags: ["kulasekhara"],
   },
   {
     id: "bhaja-govindam-1",
-    title: "Bhaja Govindam — Opening",
+    title: "Bhaja Govindam: Opening",
     deities: ["Krishna", "Vishnu"],
     occasions: ["anytime", "study"],
     festivals: ["Janmashtami"],
     kind: "stotra",
     sanskrit: "भज गोविन्दं भज गोविन्दं गोविन्दं भज मूढमते ।",
     transliteration: "Bhaja govindaṃ bhaja govindaṃ govindaṃ bhaja mūḍhamate",
-    meaning: "Worship Govinda, worship Govinda, O foolish mind—grammar will not save you at death's door.",
+    meaning: "Worship Govinda, worship Govinda, O foolish mind; grammar will not save you at death's door.",
     tags: ["shankaracharya"],
   },
   {
@@ -87,7 +87,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ गोपालाय नमः",
     transliteration: "Om gopālāya namaḥ",
-    meaning: "Salutations to Gopala—Krishna as protector of cows and devotees.",
+    meaning: "Salutations to Gopala, Krishna as protector of cows and devotees.",
     tags: ["nama"],
   },
   {
@@ -99,7 +99,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ श्री रामाय नमः",
     transliteration: "Om śrī rāmāya namaḥ",
-    meaning: "Salutations to Sri Rama—dharma, courage, and compassionate kingship.",
+    meaning: "Salutations to Sri Rama, dharma, courage, and compassionate kingship.",
     tags: ["nama"],
   },
   {
@@ -111,7 +111,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ सीतायै नमः",
     transliteration: "Om sītāyai namaḥ",
-    meaning: "Salutations to Sita—earth-born grace, steadfast love, and dignity.",
+    meaning: "Salutations to Sita, earth-born grace, steadfast love, and dignity.",
     tags: ["nama"],
   },
   {
@@ -123,7 +123,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ लक्ष्मणाय नमः",
     transliteration: "Om lakṣmaṇāya namaḥ",
-    meaning: "Salutations to Lakshmana—loyal strength beside Rama.",
+    meaning: "Salutations to Lakshmana, loyal strength beside Rama.",
     tags: ["nama"],
   },
   {
@@ -135,7 +135,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ आञ्जनेयाय नमः",
     transliteration: "Om āñjaneyāya namaḥ",
-    meaning: "Salutations to Anjaneya—Hanuman, son of Anjana.",
+    meaning: "Salutations to Anjaneya, Hanuman, son of Anjana.",
     tags: ["nama"],
   },
   {
@@ -147,7 +147,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ दुं दुर्गायै नमः",
     transliteration: "Om duṃ durgāyai namaḥ",
-    meaning: "Salutations to Durga—protector who ferries across difficulty.",
+    meaning: "Salutations to Durga, protector who ferries across difficulty.",
     tags: ["bija"],
   },
   {
@@ -159,7 +159,7 @@ const more: Draft[] = [
     kind: "stotra",
     sanskrit: "ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चै ।",
     transliteration: "Om aiṃ hrīṃ klīṃ cāmuṇḍāyai vicce",
-    meaning: "The Navarna mantra of Chandi—invoking Chamunda for courage and liberation from fear.",
+    meaning: "The Navarna mantra of Chandi; invoking Chamunda for courage and liberation from fear.",
     tags: ["navarna", "chandi"],
   },
   {
@@ -171,7 +171,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ पार्वत्यै नमः",
     transliteration: "Om pārvatyai namaḥ",
-    meaning: "Salutations to Parvati—daughter of the mountain, consort of Shiva, gentle strength.",
+    meaning: "Salutations to Parvati, daughter of the mountain, consort of Shiva, gentle strength.",
     tags: ["nama"],
   },
   {
@@ -184,7 +184,7 @@ const more: Draft[] = [
     sanskrit: "अन्नपूर्णे सदापूर्णे शङ्करप्राणवल्लभे । ज्ञानवैराग्यसिद्ध्यर्थं भिक्षां देहि च पार्वति ॥",
     transliteration:
       "Annapūrṇe sadāpūrṇe śaṅkaraprāṇavallabhe. Jñānavairāgyasiddhyarthaṃ bhikṣāṃ dehi ca pārvati",
-    meaning: "O always-full Annapurna, beloved of Shankara—grant alms for knowledge and dispassion, O Parvati.",
+    meaning: "O always-full Annapurna, beloved of Shankara. Grant alms for knowledge and dispassion, O Parvati.",
     tags: ["food"],
   },
   {
@@ -197,7 +197,7 @@ const more: Draft[] = [
     sanskrit: "ॐ महालक्ष्म्यै च विद्महे विष्णुपत्न्यै च धीमहि तन्नो लक्ष्मीः प्रचोदयात् ।",
     transliteration:
       "Om mahālakṣmyai ca vidmahe viṣṇupatnyai ca dhīmahi tanno lakṣmīḥ pracodayāt",
-    meaning: "We know Mahalakshmi; we meditate on Vishnu's consort. May Lakshmi inspire us.",
+    meaning: "We know Mahalakshmi. We meditate on Vishnu's consort. May Lakshmi inspire us.",
     tags: ["gayatri"],
   },
   {
@@ -210,7 +210,7 @@ const more: Draft[] = [
     sanskrit: "ॐ एकदन्ताय विद्महे वक्रतुण्डाय धीमहि तन्नो दन्तिः प्रचोदयात् ।",
     transliteration:
       "Om ekadantāya vidmahe vakratuṇḍāya dhīmahi tanno dantiḥ pracodayāt",
-    meaning: "We know the one-tusked; we meditate on the curved-trunked. May that Lord inspire us.",
+    meaning: "We know the one-tusked. We meditate on the curved-trunked. May that Lord inspire us.",
     tags: ["gayatri"],
   },
   {
@@ -223,7 +223,7 @@ const more: Draft[] = [
     sanskrit: "ॐ तत्पुरुषाय विद्महे महादेवाय धीमहि तन्नो रुद्रः प्रचोदयात् ।",
     transliteration:
       "Om tatpuruṣāya vidmahe mahādevāya dhīmahi tanno rudraḥ pracodayāt",
-    meaning: "We know that Purusha; we meditate on Mahadeva. May Rudra inspire us.",
+    meaning: "We know that Purusha. We meditate on Mahadeva. May Rudra inspire us.",
     tags: ["gayatri"],
   },
   {
@@ -236,7 +236,7 @@ const more: Draft[] = [
     sanskrit: "ॐ आञ्जनेयाय विद्महे वायुपुत्राय धीमहि तन्नो हनुमत् प्रचोदयात् ।",
     transliteration:
       "Om āñjaneyāya vidmahe vāyuputrāya dhīmahi tanno hanumat pracodayāt",
-    meaning: "We know Anjaneya; we meditate on the son of Vayu. May Hanuman inspire us.",
+    meaning: "We know Anjaneya. We meditate on the son of Vayu. May Hanuman inspire us.",
     tags: ["gayatri"],
   },
   {
@@ -249,7 +249,7 @@ const more: Draft[] = [
     sanskrit: "ॐ नारायणाय विद्महे वासुदेवाय धीमहि तन्नो विष्णुः प्रचोदयात् ।",
     transliteration:
       "Om nārāyaṇāya vidmahe vāsudevāya dhīmahi tanno viṣṇuḥ pracodayāt",
-    meaning: "We know Narayana; we meditate on Vasudeva. May Vishnu inspire us.",
+    meaning: "We know Narayana. We meditate on Vasudeva. May Vishnu inspire us.",
     tags: ["gayatri"],
   },
   {
@@ -262,7 +262,7 @@ const more: Draft[] = [
     sanskrit: "ॐ आदित्याय विद्महे भास्कराय धीमहि तन्नो सूर्यः प्रचोदयात् ।",
     transliteration:
       "Om ādityāya vidmahe bhāskarāya dhīmahi tanno sūryaḥ pracodayāt",
-    meaning: "We know Aditya; we meditate on Bhaskara. May Surya inspire us.",
+    meaning: "We know Aditya. We meditate on Bhaskara. May Surya inspire us.",
     tags: ["gayatri"],
   },
   {
@@ -274,7 +274,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ सोमाय नमः",
     transliteration: "Om somāya namaḥ",
-    meaning: "Salutations to Soma—the Moon, cooler of the mind and lord of nectar.",
+    meaning: "Salutations to Soma, the Moon, cooler of the mind and lord of nectar.",
     tags: ["graha"],
   },
   {
@@ -286,7 +286,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ अङ्गारकाय नमः",
     transliteration: "Om aṅgārakāya namaḥ",
-    meaning: "Salutations to Angaraka—Mars among the Navagrahas.",
+    meaning: "Salutations to Angaraka, Mars among the Navagrahas.",
     tags: ["graha"],
   },
   {
@@ -298,7 +298,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ बुधाय नमः",
     transliteration: "Om budhāya namaḥ",
-    meaning: "Salutations to Budha—Mercury, clarity of intellect and speech.",
+    meaning: "Salutations to Budha, Mercury, clarity of intellect and speech.",
     tags: ["graha"],
   },
   {
@@ -310,7 +310,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ बृहस्पतये नमः",
     transliteration: "Om bṛhaspataye namaḥ",
-    meaning: "Salutations to Brihaspati—Guru among planets, grace of wisdom.",
+    meaning: "Salutations to Brihaspati, Guru among planets, grace of wisdom.",
     tags: ["graha"],
   },
   {
@@ -322,7 +322,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ शुक्राय नमः",
     transliteration: "Om śukrāya namaḥ",
-    meaning: "Salutations to Shukra—Venus, refinement and fruitful relationships.",
+    meaning: "Salutations to Shukra, Venus, refinement and fruitful relationships.",
     tags: ["graha"],
   },
   {
@@ -334,7 +334,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ शनैश्चराय नमः",
     transliteration: "Om śanaiścarāya namaḥ",
-    meaning: "Salutations to Shani—Saturn, teacher of patience and just results.",
+    meaning: "Salutations to Shani, Saturn, teacher of patience and just results.",
     tags: ["graha"],
   },
   {
@@ -346,7 +346,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ राहवे नमः",
     transliteration: "Om rāhave namaḥ",
-    meaning: "Salutations to Rahu—shadow planet of desire and unconventional paths.",
+    meaning: "Salutations to Rahu, shadow planet of desire and unconventional paths.",
     tags: ["graha"],
   },
   {
@@ -358,7 +358,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ केतवे नमः",
     transliteration: "Om ketave namaḥ",
-    meaning: "Salutations to Ketu—shadow planet of detachment and insight.",
+    meaning: "Salutations to Ketu, shadow planet of detachment and insight.",
     tags: ["graha"],
   },
   {
@@ -371,7 +371,7 @@ const more: Draft[] = [
     sanskrit: "शुभं करोति कल्याणं आरोग्यं धनसंपदा । शत्रुबुद्धिविनाशाय दीपज्योतिर्नमोऽस्तुते ॥",
     transliteration:
       "Śubhaṃ karoti kalyāṇaṃ ārogyaṃ dhanasaṃpadā. Śatrubuddhivināśāya dīpajyotirnamo'stute",
-    meaning: "Lamp-light that brings welfare, health, and prosperity—salutations; destroy hostile intent.",
+    meaning: "Lamp-light that brings welfare, health, and prosperity. Salutations. Destroy hostile intent.",
     tags: ["diya", "evening"],
   },
   {
@@ -383,7 +383,7 @@ const more: Draft[] = [
     kind: "prayer",
     sanskrit: "ॐ पार्वतीश्वरभ्यां नमः",
     transliteration: "Om pārvatīśvarābhyāṃ namaḥ",
-    meaning: "Salutations to Parvati and Ishvara—remembrance for Karva Chauth vows of love and protection.",
+    meaning: "Salutations to Parvati and Ishvara, remembrance for Karva Chauth vows of love and protection.",
     tags: ["vrat"],
   },
   {
@@ -407,19 +407,19 @@ const more: Draft[] = [
     kind: "prayer",
     sanskrit: "ॐ नमो नारायणाय",
     transliteration: "Om namo nārāyaṇāya",
-    meaning: "Kartik full moon—lamps for Narayana and Tulsi, ending the sacred month in light.",
+    meaning: "Kartik full moon; lamps for Narayana and Tulsi, ending the sacred month in light.",
     tags: ["kartik"],
   },
   {
     id: "pongal-prayer",
-    title: "Pongal — Surya Gratitude",
+    title: "Pongal: Surya Gratitude",
     deities: ["Surya"],
     occasions: ["morning"],
     festivals: ["Pongal", "Makar Sankranti"],
     kind: "prayer",
     sanskrit: "ॐ सूर्याय नमः",
     transliteration: "Om sūryāya namaḥ",
-    meaning: "Salutations to Surya—harvest thanks at Pongal and Makara transition.",
+    meaning: "Salutations to Surya, harvest thanks at Pongal and Makara transition.",
     tags: ["harvest"],
   },
   {
@@ -431,7 +431,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ शरवणभवाय नमः",
     transliteration: "Om śaravaṇabhavāya namaḥ",
-    meaning: "Salutations to Sharavanabhava—Skanda born of the reed forest, lord of valor.",
+    meaning: "Salutations to Sharavanabhava, Skanda born of the reed forest, lord of valor.",
     tags: ["murugan"],
   },
   {
@@ -443,7 +443,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "स्वामीये शरणं अय्यप्पा",
     transliteration: "Svāmīye śaraṇaṃ ayyappā",
-    meaning: "Lord, I take refuge in Ayyappa—pilgrim mantra of devotion and discipline.",
+    meaning: "Lord, I take refuge in Ayyappa; pilgrim mantra of devotion and discipline.",
     tags: ["sabarimala"],
   },
   {
@@ -479,7 +479,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ सन्तोषी मात्रे नमः",
     transliteration: "Om santoṣī mātre namaḥ",
-    meaning: "Salutations to Santoshi Mata—contentment and simple fulfilled vows.",
+    meaning: "Salutations to Santoshi Mata, contentment and simple fulfilled vows.",
     tags: ["mata"],
   },
   {
@@ -491,7 +491,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ सन्तानगोपालाय नमः",
     transliteration: "Om santānagopālāya namaḥ",
-    meaning: "Salutations to Santana Gopala—Krishna invoked for the blessing of children and continuity.",
+    meaning: "Salutations to Santana Gopala, Krishna invoked for the blessing of children and continuity.",
     tags: ["gopal"],
   },
   {
@@ -503,7 +503,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ सुदर्शनाय नमः",
     transliteration: "Om sudarśanāya namaḥ",
-    meaning: "Salutations to Sudarshana—Vishnu's discus of protective, cutting light.",
+    meaning: "Salutations to Sudarshana, Vishnu's discus of protective, cutting light.",
     tags: ["protection"],
   },
   {
@@ -515,7 +515,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ हयग्रीवाय नमः",
     transliteration: "Om hayagrīvāya namaḥ",
-    meaning: "Salutations to Hayagriva—Vishnu as lord of knowledge and sacred learning.",
+    meaning: "Salutations to Hayagriva, Vishnu as lord of knowledge and sacred learning.",
     tags: ["vidya"],
   },
   {
@@ -527,7 +527,7 @@ const more: Draft[] = [
     kind: "mantra",
     sanskrit: "ॐ द्रां दत्तात्रेयाय नमः",
     transliteration: "Om drāṃ dattātreyāya namaḥ",
-    meaning: "Salutations to Dattatreya—the Guru embodying Brahma, Vishnu, and Shiva.",
+    meaning: "Salutations to Dattatreya, the Guru embodying Brahma, Vishnu, and Shiva.",
     tags: ["guru"],
   },
 ];
