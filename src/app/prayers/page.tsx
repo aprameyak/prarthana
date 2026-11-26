@@ -1,8 +1,11 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { PrayersBrowser } from "@/components/PrayersBrowser";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Prayers",
+  description: "Browse mantras, stotras, and aartis by deity, occasion, festival, or type.",
+  alternates: { canonical: "/prayers" },
 };
 
 export default function PrayersPage() {

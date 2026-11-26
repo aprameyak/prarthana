@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FavoriteButton } from "@/components/FavoriteButton";
@@ -7,19 +8,40 @@ import {
   OCCASION_LABELS,
   PRAYERS,
 } from "@/data/prayers";
+import { metaDescription } from "@/lib/site";
 
 export function generateStaticParams() {
   return PRAYERS.map((p) => ({ id: p.id }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
-  return params.then(({ id }) => {
-    const prayer = getPrayer(id);
-    return {
-      title: prayer?.title ?? "Prayer",
-      description: prayer?.meaning,
-    };
-  });
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const prayer = getPrayer(id);
+  if (!prayer) return { title: "Prayer" };
+
+  const description = metaDescription(prayer.meaning);
+  const path = `/prayers/${prayer.id}`;
+
+  return {
+    title: prayer.title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      title: prayer.title,
+      description,
+      url: path,
+    },
+    twitter: {
+      card: "summary",
+      title: prayer.title,
+      description,
+    },
+  };
 }
 
 export default async function PrayerPage({
