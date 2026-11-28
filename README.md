@@ -20,12 +20,3 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-## Deploy (Cloudflare Workers)
-
-```bash
-STATIC_EXPORT=1 npm run build
-npx wrangler deploy
-```
-
-The site is served from https://prarthana.aprameyakannan.com.
