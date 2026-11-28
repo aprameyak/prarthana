@@ -2,6 +2,8 @@
 
 A Sanatana Dharma prayer companion. **Everything on the site is Latin script** — transliteration to read aloud, English meaning to understand. Favorites stay on your device.
 
+Live site: https://prarthana.aprameyakannan.com
+
 See [DATA.md](./DATA.md). Devanagari may exist in the data files for sourcing; it is not published in the UI.
 
 ```bash
@@ -26,4 +28,4 @@ STATIC_EXPORT=1 npm run build
 npx wrangler deploy
 ```
 
-Custom domain pattern: `https://prarthana.aprameyakannan.com`
+The site is served from https://prarthana.aprameyakannan.com.
